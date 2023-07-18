@@ -1,0 +1,175 @@
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+body {
+    max-width: 1440px 100%;
+    background-color: rgba(245, 222, 179, 0.452);
+}
+
+.container {
+    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.801);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+        font-size: 35px;
+        text-transform: uppercase;
+    }
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .piano {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: black;
+        padding-bottom: 30px;
+        border-radius: 30px;
+
+        &_header {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            &-settings {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                span {
+                    color: white;
+                    font-size: 30px;
+                    padding-right: 20px;
+                }
+
+                &--volume {
+
+                    input {
+                        accent-color: white;
+                    }
+                }
+
+                &--checkbox {
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        appearance: none;
+                        background-color: gray;
+                        width: 60px;
+                        height: 30px;
+                        border-radius: 30px;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 15%;
+                            left: 8%;
+                            height: 20px;
+                            width: 20px;
+                            background-color: black;
+                            border-radius: 30px;
+                            transform: translateX(0%);
+                            transition: all 0.3s ease;
+                        }
+
+                        &:checked::before {
+                            content: '';
+                            height: 20px;
+                            width: 20px;
+                            background-color: white;
+                            border-radius: 30px;
+                            transform: translateX(150%);
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_keys {
+            margin-top: 20px;
+
+            &-list {
+                list-style-type: none;
+                display: flex;
+                &--white {
+                    text-align: center;
+                    width: 100px;
+                    background-color: white;
+                    height: 300px;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    border: 2px gray solid;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    box-shadow: 0px 7px 11px 0px rgba(0, 0, 0, 0.75);
+                    transition: all 0.2s ease;
+                    transform: perspective(400px) rotateX(0deg);
+                    border-top: 5px black solid;
+                    &:active {
+                        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+                        transition: all 0.2s ease;
+                        transform: perspective(400px) rotateX(10deg);
+                      
+                    }
+                }
+
+                &--black {
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: white;
+                    font-size: 30px;
+                    width: 44px;
+                    margin: 0 -22px 0 - 22px;
+                    height: 150px;
+                    background-color: black;
+                    position: relative;
+                    z-index: 10;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    box-shadow: 0px 7px 11px 0px rgba(0, 0, 0, 0.75);
+                    transition: all 0.2s ease;
+                    transform: perspective(400px) rotateX(0deg);
+                    &:active {
+                        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+                        transition: all 0.2s ease;
+                        transform: perspective(400px) rotateX(10deg);
+                        height: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/// SUPCLASSES
+
+.hidden {
+    display: none;
+}

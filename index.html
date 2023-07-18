@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Piano project</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="piano">
+                <div class="piano_header">
+                    <div class="piano_header-settings">
+                        <div class="piano_header-settings--volume">
+                            <span>Volume</span><input type="range" min="o" max="1" step="0.05" class="volume" value="1" id="volumeRange">
+                        </div>
+                        <div id="button" class="piano_header-settings--checkbox">
+                            <span>Show Keys</span><input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="piano_keys">
+                    <ul class="piano_keys-list">
+                        <li class="piano_keys-list--white" data-key="c">
+                            <p>c</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="cSharp">
+                            <p>c#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="d">
+                            <p>d</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="dSharp">
+                            <p>d#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="e">
+                            <p>e</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="f">
+                            <p>f</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="fSharp">
+                            <p>F#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="g">
+                            <p>g</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="gSharp">
+                            <p>g#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="a">
+                            <p>a</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="aSharp">
+                            <p>a#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="b">
+                            <p>b</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="cHigherOctave">
+                            <p>c</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="cHigherOctaveSharp">
+                            <p>c#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="dHigherOctave">
+                            <p>d</p>
+                        </li>
+                        <li class="piano_keys-list--black" data-key="dHigherOctaveSharp">
+                            <p>d#</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="eHigherOctave">
+                            <p>e</p>
+                        </li>
+                        <li class="piano_keys-list--white" data-key="fHigherOctave">
+                            <p>f</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
